@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserSeeder::class);
 
         //creates 10 users in database using the faker Postfactory 
-        factory('App\User',10)->create()->each(function($user){
+        factory('App\User',100)->create()->each(function($user){
         
             //creates 10 posts as to 10 users
             $user->posts()->save(factory('App\Post')->make());
